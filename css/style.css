@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'Exo 2.0';
+  src: url('../fonts/Exo20-Thin.eot');
+  src: url('../fonts/Exo20-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/Exo20-Thin.woff2') format('woff2'), url('../fonts/Exo20-Thin.woff') format('woff'), url('../fonts/Exo20-Thin.ttf') format('truetype'), url('../fonts/Exo20-Thin.svg#Exo2.0-Thin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+}
+body {
+  font-family: 'Exo 2.0', sans-serif;
+}
+section {
+  width: 100%;
+  padding: 40px 0;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.main {
+  text-align: center;
+  vertical-align: middle;
+  background: url(../img/bg.jpg) repeat;
+  color: #ffffff;
+}
+.main__heading {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+.main .food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.main .food__item {
+  margin-right: 15px;
+}
+.main .food__item .heading {
+  margin-top: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+}
+.main .food__item .heading-default a {
+  display: inline-block;
+  color: #1698d9;
+  text-decoration: none;
+  border-bottom: 1px dashed #1698d9;
+}
+.main .food__item .heading-selected {
+  display: none;
+}
+.main .food__item .heading-disabled {
+  display: none;
+  color: #ffff66;
+}
+.main .food__item .product__wrapper {
+  height: 480px;
+  width: 320px;
+  background: linear-gradient(135deg, transparent 35px, #1698d9 0);
+  border-radius: 0px 15px 15px 15px;
+}
+.main .food__item .product__wrapper:hover {
+  background: linear-gradient(135deg, transparent 35px, #37afeb 0);
+}
+.main .food__item .product__card {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-top: 15px;
+  padding-left: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: linear-gradient(-225deg, transparent 35px, #f2f2f2 0);
+  height: 472px;
+  width: 312px;
+  text-align: left;
+  color: #666666;
+  border-radius: 0px 15px 15px 15px;
+  position: relative;
+  top: 4px;
+  left: 4px;
+  z-index: 10;
+}
+.main .food__item .product__card:hover {
+  cursor: pointer;
+}
+.main .food__item .product__card:hover .weight {
+  background-color: #37afeb;
+}
+.main .food__item .product__card .product__headline {
+  line-height: 1.4rem;
+}
+.main .food__item .product__card .product__headline-selected {
+  display: none;
+  color: #d91667;
+  font-size: 16px;
+}
+.main .food__item .product__card .product__name {
+  margin: 15px 0;
+  color: #000000;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 2.2rem;
+}
+.main .food__item .product__card .product__name span {
+  font-size: 24px;
+}
+.main .food__item .product__card img {
+  border-radius: 15px;
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+}
+.main .food__item .product__card .weight {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1698d9;
+}
+.main .food__item .product__card .weight P {
+  padding-top: 20px;
+  font-size: 42px;
+  line-height: 1.5rem;
+}
+.main .food__item .product__card .weight P span {
+  font-size: 21px;
+}
+.main .food__item-selected .product__wrapper {
+  background: linear-gradient(135deg, transparent 35px, #d91667 0);
+  border-radius: 0px 15px 15px 15px;
+}
+.main .food__item-selected .product__wrapper:hover {
+  background: linear-gradient(135deg, transparent 35px, #eb3782 0);
+}
+.main .food__item-selected .product__card:hover .product__headline {
+  display: none;
+}
+.main .food__item-selected .product__card:hover .product__headline-selected {
+  display: inline-block;
+}
+.main .food__item-selected .product__card:hover .weight {
+  background-color: #eb3782;
+}
+.main .food__item-selected .product__card .weight {
+  background-color: #d91667;
+}
+.main .food__item-selected .heading-default {
+  display: none;
+}
+.main .food__item-selected .heading-selected {
+  display: inline-block;
+}
+.main .food__item-disabled .disabled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: linear-gradient(135deg, transparent 35px, rgba(255, 255, 255, 0.7) 0);
+}
+.main .food__item-disabled .product__wrapper {
+  background: linear-gradient(135deg, transparent 35px, #666666 0);
+}
+.main .food__item-disabled .product__wrapper:hover {
+  background: linear-gradient(135deg, transparent 35px, #666666 0);
+}
+.main .food__item-disabled .product__card:hover {
+  cursor: default;
+}
+.main .food__item-disabled .product__card:hover .weight {
+  background-color: #666666;
+}
+.main .food__item-disabled .product__card .product__name {
+  color: #666666;
+}
+.main .food__item-disabled .product__card .weight {
+  background-color: #666666;
+}
+.main .food__item-disabled .heading-default {
+  display: none;
+}
+.main .food__item-disabled .heading-disabled {
+  display: inline-block;
+}
